@@ -56,7 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => {
       console.error('Error fetching data:', error);
     });
-
+  
+//Load dynamic common Meta Data
+    fetch('./common/metadata.html')
+      .then((response) => response.text())
+      .then((data) => {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = data;
+        const metaTags = tempDiv.querySelectorAll('meta');
+        metaTags.forEach((meta) => document.head.appendChild(meta));
+      })
+      .catch((error) => console.error('Error loading meta file:', error));
 
   //Animation in stats block in home page
   const statItems = document.querySelectorAll('.stat-item');
