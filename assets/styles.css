@@ -216,7 +216,7 @@ nav.navbar {
 .stats-container {
     position: relative;
     width: 100%;
-    background: url('./media/school-build.jpg') no-repeat center center/cover;
+    background: url('../media/school-build.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
