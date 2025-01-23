@@ -21,7 +21,7 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', () => {
 
   //Load common files
-  fetch('./common/nav.html')
+  fetch('../common/nav.html')
     .then(response => response.text())
     .then(data => {
       const navContainer = document.getElementById('navContainer');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error fetching data:', error);
     });
 
-  fetch('./common/latest-topics.html')
+  fetch('../common/latest-topics.html')
     .then(response => response.text())
     .then(data => {
       const pdfContainer = document.querySelector('.pdf-container');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error fetching data:', error);
     });
 
-  fetch('./common/footer.html')
+  fetch('../common/footer.html')
     .then(response => response.text())
     .then(data => {
       const siteFooter = document.querySelector('.site-footer');
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
 //Load dynamic common Meta Data
-    fetch('./common/metadata.html')
+    fetch('../common/metadata.html')
       .then((response) => response.text())
       .then((data) => {
         const tempDiv = document.createElement('div');
