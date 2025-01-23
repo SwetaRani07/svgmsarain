@@ -102,7 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.getElementById('search-btn');
     const tcInput = document.getElementById('tc-input');
     const resultContainer = document.getElementById('tc-result');
-  
+    
+    if (searchBtn) {
     searchBtn.addEventListener('click', () => {
       const tcNumber = tcInput.value.trim();
   
@@ -153,4 +154,5 @@ document.addEventListener('DOMContentLoaded', () => {
           resultContainer.innerHTML = `<p style="color: red;">An error occurred while fetching data.</p>`;
         });
     });
+    }
   });  
